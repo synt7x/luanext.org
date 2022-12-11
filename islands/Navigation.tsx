@@ -1,5 +1,5 @@
 import Search from "./Search.tsx";
-import NavItem from "../components/Navitem.tsx";
+import NavItem from "../components/NavItem.tsx";
 import { FaGithub, FaBars } from "react-icons/fa";
 
 export default function Nav() {
