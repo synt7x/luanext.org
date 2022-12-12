@@ -14,12 +14,12 @@ export default function Home() {
         <meta property="og:url" content="https://luanext.deno.dev/" />
         <meta property="og:title" content="LuaNext Programming Language" />
         <meta property="og:description" content="LuaNext is a compiler toolchain that allows you to compile, transpile, lint, and format the next generation of Lua. It has support for static compilation, Lua versions dating back to 5.0, and Luau." />
-        <meta property="og:image" content="/assets/promo.png"/>
+        <meta property="og:image" content="https://luanext.deno.dev/assets/promo.png"/>
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://luanext.deno.dev/"/>
         <meta property="twitter:title" content="LuaNext Programming Language"/>
         <meta property="twitter:description" content="LuaNext is a compiler toolchain that allows you to compile, transpile, lint, and format the next generation of Lua. It has support for static compilation, Lua versions dating back to 5.0, and Luau."/>
-        <meta property="twitter:image" content="https://www.rust-lang.org/static/images/rust-social-wide.jpg"/>
+        <meta property="twitter:image" content="https://luanext.deno.dev/assets/promo.png"/>
       </Head>
       <div id="hero" class="shadow">
         <div class="w-screen" id="screen">
