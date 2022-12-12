@@ -3,7 +3,7 @@ import { JSX } from "preact";
 export function Button(props: JSX.HTMLAttributes<HTMLAnchorElement>) {
     return (
         <>
-            <a {...props} class={`shadow px-4 py-3 bg-blue-500 font-bold text-white border border-1 border-solid text-base text-lg font-medium rounded-md justify-center ${props.class}`}></a>
+            <a {...props} class={`shadow px-4 py-3 bg-blue-600 font-bold text-white border border-1 border-solid text-base text-lg font-medium rounded-md justify-center ${props.class}`}></a>
         </>
     );
 }
