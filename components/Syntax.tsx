@@ -73,9 +73,9 @@ function highlight(text: string, pattern: RegExp): token[] {
     return fragment
   }
 
-export function LuaNext(props: { children: string[] }) {
+export function LuaNext(props: { children: string }) {
     const code = props.children;
-    const fragment = highlight(code.join(''), /\b[^ .:()\n]+\b|"[^"]*"|--[^\n]*/g);
+    const fragment = highlight(code, /\b[^ .:()\n]+\b|"[^"]*"?|--[^\n]*|=/g);
 
     return (<>
         {fragment.map((token: token) => (

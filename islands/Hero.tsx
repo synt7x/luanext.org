@@ -3,7 +3,7 @@ import { IS_BROWSER } from "$fresh/runtime.ts";
 import { FaDollarSign, FaClipboard, FaCheck } from "react-icons/fa";
 
 import { Button, InlineCode, Code } from "../components/UI.tsx";
-import { LuaNext } from "../components/Syntax.tsx"
+import { Typewriter } from "../components/Typewriter.tsx"
 
 export default function Hero(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   return (
@@ -14,9 +14,12 @@ export default function Hero(props: JSX.HTMLAttributes<HTMLButtonElement>) {
           <p class="text-xl m-2">
             Compile, transpile, lint, and format your Lua code with a single engine. Use the next generation of Lua syntax to get things done quickly and more efficiently.
           </p>
-          <div class="mt-5 lg:mt-8 lg:flex gap-4">
-            <Button href="/get-started">
+          <div class="mt-5 lg:mt-8 flex gap-4">
+            <Button class="flex lg:block lg:m-0 w-full lg:w-auto" href="/get-started">
               Get Started
+            </Button>
+            <Button class="flex lg:hidden w-full" href="/docs">
+              Documentation
             </Button>
             <InlineCode>
               <div class="flex items-center">
@@ -31,17 +34,14 @@ export default function Hero(props: JSX.HTMLAttributes<HTMLButtonElement>) {
                   const copy = document.getElementById("copy")!;
                   const copied = document.getElementById("copied")!;
 
-                  // hide this element
+
                   copy.classList.add("hidden");
-                  // show the other element
                   copied.style.opacity = "1"
                   copied.classList.remove("hidden");
-                  // fade the elements opacity to 25 percent
+
                   setTimeout(() => {
                     copied.style.opacity = "0.25"
                   }, 1000)
-
-
               }} />
               <FaCheck id="copied" class="hidden ml-4 cursor-pointer text-green-400 transition-opacity duration-1000" onClick={ () => {
                 const copied = document.getElementById("copied")!;
@@ -53,9 +53,9 @@ export default function Hero(props: JSX.HTMLAttributes<HTMLButtonElement>) {
             </InlineCode>
           </div>
         </div>
-        <div class="max-w-lg pt-5 h-full hidden lg:block">
+        <div class="max-w-lg pt-5 h-64 hidden lg:block">
           <Code>
-            <LuaNext>
+              <Typewriter>
               class Dog extends Animal{"\n"}
               {"\t"}constructor(name){"\n"}
               {"\t"}{"\t"}super(name){"\n"}
@@ -67,8 +67,8 @@ export default function Hero(props: JSX.HTMLAttributes<HTMLButtonElement>) {
               end{"\n"}{"\n"}
 
               local dog = new Dog("Fido"){"\n"}
-              dog:bark() -- "Woof!" 🤯
-            </LuaNext>
+              dog:bark() -- "Woof!"
+              </Typewriter>
           </Code>
         </div>
       </main>
